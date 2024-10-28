@@ -29,7 +29,7 @@ To run the program, use the following command:
 an example is if you have a file called "test_dir", you would replace <directory> with it. This will read out the word number count, and name of the files in the directory, and will give you the byte count (not in this order)
 
 ## Error handling
-  If there is no argument, an error message would be produced and would exit out of the run.
-  The output would read an error message if the directory does not exist.
-  If the code cannot read the file an error message would be produced.
-  This code will only process normal files and skip subdirectories.
+- If there is no argument, an error message would be produced and would exit out of the run.
+- The output would read an error message if the directory does not exist.
+- If the code cannot read the file an error message would be produced.
+- This code will only process normal files and skip subdirectories.
