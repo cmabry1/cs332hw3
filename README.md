@@ -2,6 +2,8 @@
 -name: Colin Mabry
 
 -blazerid:ctmabry
+
+-project #:3 
 ## Overview
 This program will manipulate given directories and will read the files that are txt files within the directories and will give the names, give the byte count, and tell you how many words there are in each file. 
 
