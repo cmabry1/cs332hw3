@@ -1,5 +1,6 @@
 # CS332HW3
 -name: Colin Mabry
+
 -blazerid:ctmabry
 ## Overview
 This program performs file manipulation and manages multiple child processes to perform tasks on files in a specified directory. It traverses the directory, retrieves information about each file, and prints the file name, size, and word count (for .txt files) in separate child processes.
