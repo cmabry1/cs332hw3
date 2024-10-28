@@ -12,10 +12,6 @@ This program manipulates files and manages multiple child processes to perform t
 - Waits for all child processes to be completed before exiting.
 - Implements basic error handling for invalid directories, inaccessible files, and failed process creation.
 
-## Requirements
-- A POSIX-compliant operating system (Linux, macOS).
-- GCC (GNU Compiler Collection) for compilation.
-
 ## Installation
 1. Clone the repository or download the source code.
 2. Navigate to the directory containing the source code.
