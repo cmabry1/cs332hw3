@@ -3,7 +3,7 @@
 
 -blazerid:ctmabry
 ## Overview
-This program manipulates files and manages multiple child processes to perform tasks on files in a specified directory. It traverses the directory, retrieves information about each file, and prints the file name, size, and word count (for .txt files) in separate child processes.
+This program will manipulate given directories and will read the files that are txt files within the directories and will give the names, give the byte count, and tell you how many words there are in each file. 
 
 ## Features
 - Accepts a directory as a command-line argument.
@@ -22,7 +22,7 @@ gcc -o HW3 HW3.c
 To run the program, use the following command:
 ./Hw3 <directory>
 
-an example is if you have a file called "test_dir", you would replace <directory> with it. This will read out the word number count, and name of the files in the directory, and will give you the byte count (not in this order)
+An example is if you have a file called "test_dir", you would replace <directory> with it. This will read out the word number count, and name of the files in the directory, and will give you the byte count (not in this order)
 
 ## Error handling
 - If there is no argument, an error message would be produced and would exit out of the run.
