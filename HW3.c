@@ -7,7 +7,8 @@
 #include <string.h>
 #include <fcntl.h>
 #include <sys/wait.h>
-void count_words_and_print_info(const char *filepath) {
+
+void print_file_info(const char *filepath) {
     struct stat file_stat;
     if (stat(filepath, &file_stat) == -1) {
         perror("Could not get file size");
@@ -37,16 +38,14 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: %s <directory>\n", argv[0]);
         exit(EXIT_FAILURE);
     }
-
     DIR *dir = opendir(argv[1]);
     if (!dir) {
         perror("Could not open directory");
         exit(EXIT_FAILURE);
     }
-
     struct dirent *entry;
     while ((entry = readdir(dir)) != NULL) {
-        if (entry->d_type == DT_REG) {
+        if (entry->d_type == DT_REG) { 
             pid_t pid = fork();
             if (pid == -1) {
                 perror("Failed to fork");
@@ -54,13 +53,14 @@ int main(int argc, char *argv[]) {
             } else if (pid == 0) { 
                 char filepath[1024];
                 snprintf(filepath, sizeof(filepath), "%s/%s", argv[1], entry->d_name);
-                count_words_and_print_info(filepath);
+                print_file_info(filepath);
                 exit(EXIT_SUCCESS);
+            } else { 
+                waitpid(pid, NULL, 0);
             }
         }
     }
 
-    while (wait(NULL) > 0);
     closedir(dir);
     return 0;
 }
